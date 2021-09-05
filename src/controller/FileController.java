@@ -10,24 +10,23 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class FileController {
-    public static Hashtable<Integer, Expense> expenseDataSet = new Hashtable<Integer, Expense>();
-    public static Hashtable<Integer, Income> incomeDataSet = new Hashtable<Integer, Income>();
+    public static Hashtable<Integer, Expense> expenseDataSet = new Hashtable<>();
+    public static Hashtable<Integer, Income> incomeDataSet = new Hashtable<>();
     public static void readData(){
-
         try{
             File dataFile = new File("data.txt");
             Scanner reader = new Scanner(dataFile);
             int dataNum = 0;
             while (reader.hasNextLine()) {
                 String data = reader.nextLine();
-
+                String dataDetail = data.substring(data.indexOf("s") + 2);
                 if(data.indexOf("e") < 1){
-                    String dataStr = data.substring(data.indexOf("e") + 2, data.indexOf(" "));
-                    expenseDataSet.put(dataNum, new Expense(Double.parseDouble(dataStr)));
+                    String moneyStr = data.substring(data.indexOf("e") + 2, data.indexOf(" "));
+                    expenseDataSet.put(dataNum, new Expense(Double.parseDouble(moneyStr), dataDetail));
 //                    System.out.println("e: " + data.substring(data.indexOf("e") + 2, data.indexOf(" "))); //2 is for the character after e (e: )
                 } else {
-                    String dataStr = data.substring(data.indexOf("i") + 2, data.indexOf(" "));
-                    incomeDataSet.put(dataNum, new Income(Double.parseDouble(dataStr)));
+                    String moneyStr = data.substring(data.indexOf("i") + 2, data.indexOf(" "));
+                    incomeDataSet.put(dataNum, new Income(Double.parseDouble(moneyStr), dataDetail));
 //                    System.out.println("i: " + data.substring(data.indexOf("i") + 2, data.indexOf(" "))); //2 is for the character after i (i: )
                 }
                 dataNum++;

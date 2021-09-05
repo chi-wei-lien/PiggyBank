@@ -7,15 +7,16 @@ public class Income {
     private String date;
     private String detail;
 
-    public Income(double income){
+    public Income(double income, String detail){
         this.income = income;
         Date today = new Date();
         date = today.toString();
+        this.detail = detail;
     }
 
-    public static void addNewIncome(double newIncome){
+    public static void addNewIncome(double newIncome, String detail){
         Date now = new Date();
-        FileController.writeData("i:" + newIncome + " d: " + now);
+        FileController.writeData("i:" + newIncome + " d:" + now + " s:" + detail + " ");
     }
 
     public double getIncome(){

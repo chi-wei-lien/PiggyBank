@@ -10,12 +10,18 @@ public class CommandController {
             case 1:
                 System.out.println("Please enter the amount of expense you have spent: ");
                 double newExpense = scanner.nextDouble();
-                Expense.addNewExpense(newExpense);
+                scanner.nextLine();
+                System.out.println("Please provide detail of this expense: ");
+                String expenseDetail = scanner.nextLine();
+                Expense.addNewExpense(newExpense, expenseDetail);
                 break;
             case 2:
                 System.out.println("Please enter the amount of income you have received: ");
                 double newIncome = scanner.nextDouble();
-                Income.addNewIncome(newIncome);
+                scanner.nextLine();
+                System.out.println("Please provide detail of this income: ");
+                String incomeDetail = scanner.nextLine();
+                Income.addNewIncome(newIncome, incomeDetail);
                 break;
             case 3:
                 Data.loadData();
