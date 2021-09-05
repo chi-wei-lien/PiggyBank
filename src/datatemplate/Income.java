@@ -3,8 +3,9 @@ import java.util.Date;
 import controller.*;
 
 public class Income {
-    public double income = 0;
-    public String date = "";
+    private double income;
+    private String date;
+    private String detail;
 
     public Income(double income){
         this.income = income;
@@ -14,10 +15,10 @@ public class Income {
 
     public static void addNewIncome(double newIncome){
         Date now = new Date();
-        FileController.writeData("i:" + String.valueOf(newIncome) + " d: " + now);
+        FileController.writeData("i:" + newIncome + " d: " + now);
     }
 
-    public void getMoney(){
-        System.out.println(income);
+    public double getIncome(){
+        return income;
     }
 }
