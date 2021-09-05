@@ -14,6 +14,7 @@ public class CommandController {
                 System.out.println("Please provide detail of this expense: ");
                 String expenseDetail = scanner.nextLine();
                 Expense.addNewExpense(newExpense, expenseDetail);
+                FileController.readData(); //reread data
                 break;
             case 2:
                 System.out.println("Please enter the amount of income you have received: ");
@@ -22,6 +23,7 @@ public class CommandController {
                 System.out.println("Please provide detail of this income: ");
                 String incomeDetail = scanner.nextLine();
                 Income.addNewIncome(newIncome, incomeDetail);
+                FileController.readData(); //reread data
                 break;
             case 3:
                 Data.loadData();
