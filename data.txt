@@ -1,2 +1,6 @@
 e:200.0 d:Sun Sep 05 08:23:44 EDT 2021 s:bought a light 
 e:100.0 d:Sun Sep 05 08:34:08 EDT 2021 s:chase bank account setup 
+i:300.0 d:Sun Sep 05 10:16:26 EDT 2021 s:I made some money from friends 
+i:200.0 d:Sun Sep 05 10:20:54 EDT 2021 s:HI 
+e:20.0 d:Sun Sep 05 10:34:56 EDT 2021 s:bought a notebook 
+e:20.0 d:Sun Sep 05 10:37:54 EDT 2021 s:bat 
