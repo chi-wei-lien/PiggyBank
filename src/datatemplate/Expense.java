@@ -22,4 +22,12 @@ public class Expense {
     public double getExpense(){
         return expense;
     }
+
+    public String getDate(){
+        return date;
+    }
+
+    public String getDetail(){
+        return detail;
+    }
 }
