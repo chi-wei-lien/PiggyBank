@@ -7,10 +7,9 @@ public class Income {
     private String date;
     private String detail;
 
-    public Income(double income, String detail){
+    public Income(double income, String detail, String date){
         this.income = income;
-        Date today = new Date();
-        date = today.toString();
+        this.date = date;
         this.detail = detail;
     }
 

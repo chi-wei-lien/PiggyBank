@@ -7,10 +7,9 @@ public class Expense {
     private String date;
     private String detail;
 
-    public Expense(double expense, String detail){
+    public Expense(double expense, String detail, String date){
+        this.date = date;
         this.expense = expense;
-        Date today = new Date();
-        date = today.toString();
         this.detail = detail;
     }
 
