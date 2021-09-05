@@ -21,16 +21,15 @@ public class FileController {
             while (reader.hasNextLine()) {
                 String data = reader.nextLine();
                 String dataDetail = data.substring(data.indexOf("s") + 2);
-//                int debug = data.indexOf("e");
-//                System.out.println(debug);
+                String date = data.substring(data.indexOf("d") + 2, data.indexOf("d") + 30); //30 is for reading every character for date
                 if(data.indexOf("e") < 1){
                     String moneyStr = data.substring(data.indexOf("e") + 2, data.indexOf(" "));
-                    expenseDataSet.put(expenseDataNum, new Expense(Double.parseDouble(moneyStr), dataDetail));
+                    expenseDataSet.put(expenseDataNum, new Expense(Double.parseDouble(moneyStr), dataDetail, date));
 //                    System.out.println("e: " + data.substring(data.indexOf("e") + 2, data.indexOf(" "))); //2 is for the character after e (e: )
                     expenseDataNum++;
                 } else {
                     String moneyStr = data.substring(data.indexOf("i") + 2, data.indexOf(" "));
-                    incomeDataSet.put(incomeDataNum, new Income(Double.parseDouble(moneyStr), dataDetail));
+                    incomeDataSet.put(incomeDataNum, new Income(Double.parseDouble(moneyStr), dataDetail, date));
 //                    System.out.println("i: " + data.substring(data.indexOf("i") + 2, data.indexOf(" "))); //2 is for the character after i (i: )
                     incomeDataNum++;
                 }
