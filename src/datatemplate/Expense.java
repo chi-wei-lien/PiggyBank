@@ -13,9 +13,8 @@ public class Expense {
         this.detail = detail;
     }
 
-    public static void addNewExpense(double newExpense, String detail){
-        Date now = new Date();
-        FileController.writeData("e:" + newExpense + " d:" + now + " s:" + detail + " "); //s means string
+    public static void addNewExpense(double newExpense, String detail, Date date){
+        FileController.writeData("e:" + newExpense + " d:" + date + " s:" + detail + " "); //s means string
     }
 
     public double getExpense(){

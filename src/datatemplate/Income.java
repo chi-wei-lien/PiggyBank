@@ -13,9 +13,8 @@ public class Income {
         this.detail = detail;
     }
 
-    public static void addNewIncome(double newIncome, String detail){
-        Date now = new Date();
-        FileController.writeData("i:" + newIncome + " d:" + now + " s:" + detail + " ");
+    public static void addNewIncome(double newIncome, String detail, Date date){
+        FileController.writeData("i:" + newIncome + " d:" + date + " s:" + detail + " ");
     }
 
     public double getIncome(){
