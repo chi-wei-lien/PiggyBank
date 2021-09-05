@@ -27,6 +27,9 @@ public class CommandController {
                 break;
             case 3:
                 Data.loadData();
+                break;
+            case 4:
+                System.exit(0);
         }
     }
 }
