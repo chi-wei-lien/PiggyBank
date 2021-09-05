@@ -22,4 +22,12 @@ public class Income {
     public double getIncome(){
         return income;
     }
+
+    public String getDetail(){
+        return detail;
+    }
+
+    public String getDate(){
+        return date;
+    }
 }
